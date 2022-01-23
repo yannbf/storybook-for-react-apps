@@ -7,7 +7,7 @@
     "source.fixAll.eslint": true
   },
   "workbench.colorCustomizations": {
-    "activityBar.background": "#156b68",
+    "activityBar.background": "#0f3a36",
     "titleBar.activeBackground": "#50b1b6",
     "titleBar.inactiveBackground": "#50b1b6c0",
     "titleBar.activeForeground": "#F6FCEE"
