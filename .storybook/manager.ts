@@ -36,7 +36,7 @@ const theme = create({
 
   // Brand assets
   brandTitle: 'Mealdrop',
-  brandUrl: 'https://github.com/yannbf/mealdrop/',
+  brandUrl: 'https://github.com/yannbf/storybook-for-react-apps/',
   brandImage: logo,
 })
 
