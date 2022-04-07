@@ -20,7 +20,9 @@ const Template: ComponentStory<typeof PageTemplate> = (args) => <PageTemplate {.
 export const Default = Template.bind({})
 Default.args = {
   children: (
-    <DummyComponent>Default template with scrollable header and navigation items</DummyComponent>
+    <DummyComponent>
+      Default template with scrollable header and navigation items + Footer
+    </DummyComponent>
   ),
 }
 
@@ -36,7 +38,7 @@ StickyHeader.args = {
   type: 'sticky-header',
   children: (
     <DummyComponent>
-      Template with sticky header on desktop and navigation items. Try scrolling
+      Template with sticky header on desktop and navigation items. Try scrolling!
     </DummyComponent>
   ),
 }
@@ -45,6 +47,8 @@ export const Basic = Template.bind({})
 Basic.args = {
   type: 'basic',
   children: (
-    <DummyComponent>Simple template with scrollable header and no navigation items</DummyComponent>
+    <DummyComponent>
+      Simple template with scrollable headear and no navigation items and no footer.
+    </DummyComponent>
   ),
 }

@@ -1,4 +1,5 @@
 module.exports = {
+  staticDirs: ['../public'],
   stories: [
     '../src/docs/Introduction.stories.mdx',
     '../src/docs/*.stories.mdx',
@@ -12,7 +13,6 @@ module.exports = {
     'storybook-addon-designs',
     'storybook-mobile',
   ],
-  staticDirs: ['../public'],
   features: {
     storyStoreV7: true,
     interactionsDebugger: true,

@@ -13,24 +13,24 @@ type PageTemplateProps = {
 }
 
 export const PageTemplate: React.FC<PageTemplateProps> = ({ type = 'default', children }) => {
-  switch (type) {
-    case 'sticky-header':
-      return (
-        <>
-          <Header sticky />
-          <Container>{children}</Container>
-          <Footer />
-        </>
-      )
-    case 'basic':
-      return (
-        <>
-          <HeaderComponent logoOnly />
-          <Container>{children}</Container>
-        </>
-      )
+  if (type === 'basic') {
+    return (
+      <>
+        <HeaderComponent logoOnly />
+        <Container>{children}</Container>
+      </>
+    )
   }
 
+  if (type === 'sticky-header') {
+    return (
+      <>
+        <Header sticky />
+        <Container>{children}</Container>
+        <Footer />
+      </>
+    )
+  }
   return (
     <>
       <Header />
