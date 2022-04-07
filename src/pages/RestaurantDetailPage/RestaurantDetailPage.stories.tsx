@@ -32,7 +32,7 @@ export const Success = Template.bind({})
 Success.parameters = {
   design: {
     type: 'figma',
-    url: 'https://www.figma.com/file/3Q1HTCalD0lJnNvcMoEw1x/Mealdrop?node-id=169%3A510',
+    url: 'https://www.figma.com/proto/3Q1HTCalD0lJnNvcMoEw1x/Mealdrop?node-id=169%3A510&scaling=scale-down-width&page-id=135%3A257&starting-point-node-id=135%3A258',
   },
   msw: [
     rest.get(BASE_URL, (req, res, ctx) => {
