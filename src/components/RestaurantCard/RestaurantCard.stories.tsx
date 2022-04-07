@@ -1,4 +1,6 @@
 import { ComponentStory, ComponentMeta } from '@storybook/react'
+import { within, userEvent } from '@storybook/testing-library'
+import { expect } from '@storybook/jest'
 
 import { restaurants } from '../../stub/restaurants'
 
@@ -7,6 +9,9 @@ import { RestaurantCard } from './RestaurantCard'
 export default {
   title: 'Components/RestaurantCard',
   component: RestaurantCard,
+  args: {
+    ...restaurants[0],
+  },
   parameters: {
     design: {
       type: 'figspec',
@@ -28,24 +33,28 @@ export default {
 const Template: ComponentStory<typeof RestaurantCard> = (args) => <RestaurantCard {...args} />
 
 export const Default = Template.bind({})
-Default.args = {
-  ...restaurants[0],
+Default.play = async ({ canvasElement, args }) => {
+  const canvas = within(canvasElement)
+  await userEvent.click(canvas.getByTestId('restaurant-card'))
+  await expect(args.onClick).toHaveBeenCalled()
 }
 
 export const New = Template.bind({})
 New.args = {
-  ...Default.args,
   isNew: true,
 }
 
 export const Closed = Template.bind({})
 Closed.args = {
-  ...Default.args,
   isClosed: true,
+}
+Closed.play = async ({ canvasElement, args }) => {
+  const canvas = within(canvasElement)
+  await userEvent.click(canvas.getByTestId('restaurant-card'))
+  await expect(args.onClick).not.toHaveBeenCalled()
 }
 
 export const Loading = Template.bind({})
 Loading.args = {
-  ...Default.args,
   isLoading: true,
 }
