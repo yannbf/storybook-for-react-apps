@@ -108,7 +108,7 @@ export const RestaurantDetailPage: VFC = () => {
         onItemSave={addItemToCart}
         onItemRemove={clearItemFromCart}
       />
-      <TopBanner photoUrl={photoUrl} onBackClick={() => navigate(-1)} />
+      <TopBanner photoUrl={photoUrl} />
       <DetailSection>
         <div className="container">
           <Heading level={2}>{name}</Heading>

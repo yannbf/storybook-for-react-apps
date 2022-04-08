@@ -1,4 +1,3 @@
-import { useNavigate } from 'react-router-dom'
 import styled from 'styled-components'
 
 import { PageTemplate } from '../../templates/PageTemplate'
@@ -18,10 +17,9 @@ const StyledBody = styled(Body)`
 `
 
 export const CategoryListPage = () => {
-  const navigate = useNavigate()
   return (
     <PageTemplate>
-      <TopBanner title="Categories" onBackClick={() => navigate(-1)} />
+      <TopBanner title="Categories" />
       <div className="container">
         <StyledHeading level={2}>What’s on the menu?</StyledHeading>
         <StyledBody>

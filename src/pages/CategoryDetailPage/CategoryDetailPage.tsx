@@ -37,11 +37,7 @@ export const CategoryDetailPage = () => {
 
   return (
     <PageTemplate>
-      <TopBanner
-        title={category?.title || 'Oops!'}
-        photoUrl={category?.photoUrl}
-        onBackClick={() => navigate(-1)}
-      />
+      <TopBanner title={category?.title || 'Oops!'} photoUrl={category?.photoUrl} />
       <div className="container">
         <Breadcrumb>
           <p style={{ display: 'inline-block', textDecoration: 'underline' }}>
