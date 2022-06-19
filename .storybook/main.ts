@@ -9,7 +9,12 @@ module.exports = {
     '@storybook/addon-essentials',
     '@storybook/preset-create-react-app',
     'storybook-addon-designs',
+    '@storybook/addon-interactions',
+    '@storybook/addon-a11y',
   ],
+  features: {
+    interactionsDebugger: true,
+  },
   framework: '@storybook/react',
   core: {
     builder: 'webpack5',
